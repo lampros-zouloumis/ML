@@ -22,8 +22,7 @@ class FeatureImportanceAnalyzer:
         :return: Dictionary with feature-wise metrics.
         """
         explainer = shap.TreeExplainer(self.model)
-        result = explainer(self.input_set)
-        shap_values = result.values
+        shap_values= explainer.shap_values(self.input_set)
         mean_magnitude = np.mean(np.abs(shap_values), axis=0)
         std_dev = np.std(shap_values, axis=0)
         self.metrics = {
