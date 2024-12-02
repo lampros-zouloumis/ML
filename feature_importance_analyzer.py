@@ -58,7 +58,8 @@ class FeatureImportanceAnalyzer:
         :param input_set: Dataset to validate against.
         :return: Validated feature names.
         """
-        if len(self.feature_names) != len(self.input_set[0]):
+        _, number_of_features = self.input_set.shape
+        if len(self.feature_names) != number_of_features:
             raise ValueError("Number of feature names must match the number of features in the input dataset.")
         return self.feature_names
     
