@@ -73,7 +73,6 @@ The SHAP metrics were calculated for 12 features from the dataset. Each feature'
 ## **Generated Files**
 
 - **`shap_metrics.csv`**: Contains the SHAP metrics for all features.
-- **`shap_statistics.csv`**: Contains descriptive statistics for the SHAP metrics.
 
 ---
 
